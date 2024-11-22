@@ -24,4 +24,13 @@ public class Customer {
     public void setWindowNumber(long windowNumber) {
         this.windowNumber = windowNumber;
     }
+
+    public void reset(long currentWindowNumber) {
+        this.requestCount = 0;
+        this.windowNumber = currentWindowNumber;
+    }
+
+    public void increment() {
+        this.requestCount ++;
+    }
 }

@@ -4,12 +4,14 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.time.Duration;
+
 public class RateLimiterTest {
     RateLimiter rateLimiter;
 
     @BeforeEach
     void setUp(){
-        rateLimiter = new RateLimiter(10,5);
+        rateLimiter = new RateLimiter(10, Duration.ofSeconds(5));
     }
 
     @Test
