@@ -1,4 +1,4 @@
-package org.consistent.practice.dsa.day1.fixedwindowratelimiterwithcreditsystem;
+package org.consistent.practice.dsa.day1.ratelimiter.fixedwindowwithcreditsystem;
 
 import java.time.Duration;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package org.consistent.practice.dsa.day1.fixedwindowratelimiter;
+package org.consistent.practice.dsa.day1.ratelimiter.fixedwindow;
 
 import java.time.Duration;
 import java.util.HashMap;
@@ -8,7 +8,7 @@ public class RateLimiter {
     private final int requestLimit;
     private final Duration windowSize;
 
-    Map<Integer,Customer> customers = new HashMap<>();
+    Map<Integer, Customer> customers = new HashMap<>();
 
     public RateLimiter(int requestLimit, Duration windowSize) {
         this.requestLimit = requestLimit;

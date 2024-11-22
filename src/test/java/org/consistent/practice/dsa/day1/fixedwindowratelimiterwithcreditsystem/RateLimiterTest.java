@@ -1,5 +1,6 @@
 package org.consistent.practice.dsa.day1.fixedwindowratelimiterwithcreditsystem;
 
+import org.consistent.practice.dsa.day1.ratelimiter.fixedwindowwithcreditsystem.RateLimiter;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;

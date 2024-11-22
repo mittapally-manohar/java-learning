@@ -1,6 +1,6 @@
-package org.consistent.practice.dsa.day1.fixedwindowratelimiter;
+package org.consistent.practice.dsa.day1.slidingwindow;
 
-import org.consistent.practice.dsa.day1.ratelimiter.fixedwindow.RateLimiter;
+import org.consistent.practice.dsa.day1.ratelimiter.slidingwindow.RateLimiter;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
