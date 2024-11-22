@@ -1,4 +1,4 @@
-package org.consistent.practice.dsa.day1;
+package org.consistent.practice.dsa.day1.fixedwindowratelimiter;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

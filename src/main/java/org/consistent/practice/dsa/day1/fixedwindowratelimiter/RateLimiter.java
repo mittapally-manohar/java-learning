@@ -1,4 +1,4 @@
-package org.consistent.practice.dsa.day1;
+package org.consistent.practice.dsa.day1.fixedwindowratelimiter;
 
 import java.time.Duration;
 import java.util.HashMap;
