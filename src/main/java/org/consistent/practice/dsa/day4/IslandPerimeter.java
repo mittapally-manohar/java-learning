@@ -18,7 +18,6 @@ class IslandPerimeter {
         System.out.println("Island Perimeter: " + perimeter);
     }
 
-
     public int islandPerimeter(int[][] grid) {
         if (grid == null) {
             return 0;
