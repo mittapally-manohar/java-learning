@@ -1,47 +1,54 @@
 package org.consistent.practice.challenge;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-public class Solution {
-    public static void solveGame(int rows, int cols, int[][] points) {
-        int totalPoints = 0;
-        int row = 0, col = 0;
-
-        // Add points at the starting position
-        totalPoints += points[row][col];
-
-        // Traverse down to the last row
-        while (row < rows - 1) {
-            row++;
-            totalPoints += points[row][col];
+class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        int n = nums.length;
+        Arrays.sort(nums);
+        for (int i = 0; i < n-2; i++){
+            if (i!=0 && nums[i] == nums[i-1]) {
+                continue;
+            }
+            int j = i+1;
+            int k = n-1;
+            //-4 -1 -1 0 1 2
+            while (j < k) {
+                int sum = nums[i]+nums[j]+nums[k];
+                if (sum == 0) {
+                    res.add(Arrays.asList(nums[i],nums[j],nums[k]));
+                }else if (sum > 0) {
+                    while (j < --k && nums[k+1]==nums[k]){
+                    }
+                }else {
+                    while (++j < k && nums[j]==nums[j-1]){
+                      
+                    }
+                }
+            }
         }
-
-        // Traverse right to the last column
-        while (col < cols - 1) {
-            col++;
-            totalPoints += points[row][col];
-        }
-
-        // Print the total points collected
-        System.out.println(totalPoints);
+        return res;
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Solution solution = new Solution();
 
-        // Read grid dimensions
-        int rows = scanner.nextInt();
-        int cols = scanner.nextInt();
+        int[] nums1 = {-1, 0, 1, 2, -1, -4};
+        System.out.println("Test Case 1: " + solution.threeSum(nums1));
 
-        // Read grid points
-        int[][] points = new int[rows][cols];
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                points[i][j] = scanner.nextInt();
-            }
-        }
+        int[] nums2 = {0, 0, 0, 0};
+        System.out.println("Test Case 2: " + solution.threeSum(nums2));
 
-        // Solve the game
-        solveGame(rows, cols, points);
+        int[] nums3 = {-2, 0, 1, 1, 2};
+        System.out.println("Test Case 3: " + solution.threeSum(nums3));
+
+        int[] nums4 = {};
+        System.out.println("Test Case 4: " + solution.threeSum(nums4));
+
+        int[] nums5 = {0};
+        System.out.println("Test Case 5: " + solution.threeSum(nums5));
     }
 }
